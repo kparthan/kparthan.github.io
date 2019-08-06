@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<title>Softwares</title>
+  	<link href="./Softwares_files/mystyles.css" rel="stylesheet" type="text/css">
+
+<!--
+	<script async="" src="./Softwares_files/analytics.js"></script><script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-70441441-4', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+-->
+
+</head>
+
+<body>
+	<div class="top_box">
+		Parthan Kasarapu
+	</div>
+	<div class="menu_bar">
+		<div class="menu_gradient">
+			<div class="menu_items">
+				<a href="index.html" class="style1">HOME</a>
+				<a href="research.html" class="style1">RESEARCH</a>
+				<a href="publications.html" class="style1">PUBLICATIONS</a>
+				<a href="teaching.html" class="style1">TEACHING</a>
+				<span style="font-weight:bold;">SOFTWARE</span>
+			</div>
+		</div>
+	</div>
+	<div class="content_box">
+		<div class="content">
+        <a name="gmm_search"><font color="green">★ gmm-search:</font></a>
+        C++ software for MML-based multivariate Gaussian mixture modelling 
+        <br><br>
+        <div class="boxed2">
+          <b>Cite:</b>
+          <span style="font-size:10pt">
+            P. Kasarapu, L. Allison, Minimum message length estimation of mixtures of multivariate Gaussian and
+            von Mises-Fisher distributions, <i>Machine Learning</i>, 2015, Vol. 100, No. 2-3, Pages 333-378.
+          </span>
+        </div>
+        <br>
+
+        Instructions on downloading and executing the program.
+          <ol>
+            <li>
+            <b>Download</b> the <a href="programs/gmm-search">executable</a>.
+            </li><br>
+
+            <li><b>Run</b> the executable as follows:<br>
+                <b>Usage:</b> ./gmm-search --mixture --infer_components [options]<br>
+                <b>Allowed options:</b><br>
+                  <table border="0" width="600">
+                    <tbody><tr>
+                      <td>- -<b>help</b></td>
+                      <td>&nbsp;</td>                       
+                      <td>produce help message</td>
+                    </tr>
+                    <tr>
+                      <td>- -<b>profile</b></td> 
+                      <td><i>arg&nbsp;&nbsp;</i></td>       
+                      <td>data file containing N rows and D columns<br> (values separated by white space)</td>
+                    </tr>
+                    <tr>
+                      <td>- -<b>log</b></td>                    
+                      <td><i>arg&nbsp;&nbsp;</i></td>       
+                      <td>output file</td>
+                    </tr>
+                    <tr>
+                      <td>- -<b>mt</b></td>                    
+                      <td><i>arg&nbsp;&nbsp;</i></td>       
+                      <td>optional multithreading (default 1 core)</td>
+                    </tr>
+                    <tr>
+                      <td>- -<b>improvement</b></td>                    
+                      <td><i>arg&nbsp;&nbsp;</i></td>       
+                      <td>optional threshold to terminate the search (default 0.1%)
+                      <!--that is, when improvement to message length is less than 0.1%)-->
+                      </td>
+                    </tr>
+                  </tbody></table>
+          (Note the two hyphens at the beginning of each option.)
+            </li><br>
+
+            <li><b>An example:</b><br>
+                ./gmm-search &nbsp; --mixture &nbsp; --infer_components &nbsp; --profile <i>iris.dat</i>  &nbsp;--log <i>output.log</i>  &nbsp;--mt <i>2</i> &nbsp; --improvement <i>0.001</i>
+            </li><br>
+
+            <li><b>Output</b><br>
+            The <i>output.log</i> contains the information about the operations that
+            are performed as part of the search method to determine the optimal number
+            of mixture components. Each iteration has a <i>Parent</i> mixture, and the last
+            such mixture in the output file is the final answer.
+            </li><br>
+        </ol>
+
+        <a name="piecewise"><font color="green">★ piecewise-nonlinear-fit:</font></a>
+        C++ software for Bézier segmentation 
+        <br><br>
+        <div class="boxed2">
+          <b>Cite:</b>
+          <span style="font-size:10pt">
+            P. Kasarapu, M. G. de la Banda, A. S. Konagurthu, On representing protein folding patterns using
+            non-linear parametric curves, <i>IEEE/ACM Transactions on Computational Biology and Bioinformatics</i>,
+            2014, Vol. 11, No. 6, Pages 1218-1228.
+          </span>
+        </div>
+        <br>
+
+        Instructions on downloading and executing the program.
+          <ol>
+            <li><b>Download</b> the <a href="programs/piecewise-nonlinear-fit.tar.bz2">archive</a> containing the program. After uncompressing, you should have:
+              <ul>
+                <li>The executable <i>piecewise-nonlinear-fit</i> </li>
+                <li>A <i>test</i> folder containing sample PDB files</li>
+                <li>An empty folder named <i>output</i> in which the results will be stored.</li>
+              </ul>
+            </li><br>
+
+            <li><b>Run</b> the executable as follows:<br>
+                <b>Usage:</b> ./piecewise-nonlinear-fit [options]<br>
+                <b>Allowed options:</b><br>
+                  <table border="0" width="600">
+                    <tbody><tr>
+                      <td>- -<b>help</b></td>
+                      <td>&nbsp;</td>                       
+                      <td>produce help message</td>
+                    </tr>
+                    <tr>
+                      <td>- -<b>pdbfile</b></td> 
+                      <td><i>arg&nbsp;&nbsp;</i></td>           
+                      <td>path to pdb file</td>
+                    </tr>
+                    <tr>
+                      <td>- -<b>maxdegree</b></td> 
+                      <td><i>arg&nbsp;&nbsp;</i></td>       
+                      <td>maximum degree of the Bezier curve [1, 2 or 3]</td>
+                    </tr>
+                    <tr>
+                      <td>- -<b>verbose</b></td>                    
+                      <td>&nbsp;</td>                       
+                      <td>detailed output</td>
+                    </tr>
+                  </tbody></table>
+          (Note the two hyphens at the beginning of each option.)
+            </li><br>
+
+            <li><b>An example:</b><br>
+                ./piecewise-nonlinear-fit &nbsp;&nbsp; --pdbfile &nbsp;<i>test/pdb2wyq.ent.gz</i> &nbsp;&nbsp; --maxdegree &nbsp;<i>3</i><br>
+          This runs the program on the PDB file and generates the segmentation.
+            </li><br>
+
+            <li><b>Output</b><br>
+          After the program is executed, cd to the <i>output</i> directory. 
+          <ol>
+            <li><i>pdb2wyq-nonlinear-fit.log</i> file contains the segmentation results.</li>
+            <li>
+            <i>pdb2wyq.pml</i> file can be opened using Pymol to visualize the cartoon representation of the protein along with its segmentation.
+            <br>The following command can be used: &nbsp;&nbsp;<i>pymol pdb2wyq.pml</i>
+            </li>
+          </ol>
+            </li><br>
+          </ol>
+        <br><br>
+        <b>Note:</b> The programs are expected to work in a Linux environment (kernel version 2.6.18 and later).
+
+		</div>	
+	</div>
+	<div class="bottom_box">
+		<!--Parthan Kasarapu-->
+	</div>
+
+
+
+</body></html>
